@@ -20,3 +20,5 @@ jobs:
     - name: Build project with Makefile
       run: |
         make
+    - name: Run tests
+      run: ./hibp example_usage/bitwarden_example.csv example_usage/example_database 4

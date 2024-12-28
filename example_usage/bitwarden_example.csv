@@ -1,3 +1,4 @@
+folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp
 githubfolder,1,login,firstExample,"this is a note for the first password this is in the favorites too",,0,jujuyoyo.com,username1,password,
 githubfolder,,login,secondExample,"this is a note for the 2nd account it is not in my favorites",,0,gmail.com,username2,password123,
 githubfolder,1,login,thirdExample,"this is a note",,0,jujuyoyo.com,username1,123456789,
@@ -5,7 +6,6 @@ githubfolder,,login,fourthExample,"this is a note",,0,gmail.com,username2,passwo
 githubfolder,1,login,firstExample,"this is a note",,0,jujuyoyo.com,username1,iloveyou,
 githubfolder,,login,secondExample,"this is a note",,0,gmail.com,username2,letmein,
 githubfolder,,login,secondExample,"this is a note",,0,gmail.com,username2,abc123,
-folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp
 test_folder,1,login,TestAccount_1,Demo login for testing,,0,https://demoservice.org,test_user_169,TestPass942,
 test_folder,1,login,TestAccount_2,Sample account for documentation,,0,https://demoservice.org,test_user_567,Admin377#,
 test_folder,,login,TestAccount_3,Demo login for testing,,0,https://samplesite.edu,demo_admin_34,Password436!,

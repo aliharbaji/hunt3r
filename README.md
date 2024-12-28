@@ -10,7 +10,7 @@ The tool works by hashing each password using SHA-1, then truncating the first 5
 
 ## Requirements
 
-Before using the tool, you need to download the **HaveIBeenPwned** [database](https://haveibeenpwned.com/Passwords) and export your [Bitwarden](https://bitwarden.com/) vault in CSV format.
+Before using the tool, you need to download the [_HaveIBeenPwned_](https://haveibeenpwned.com/) database and export your [_Bitwarden_](https://bitwarden.com/) vault in CSV format.
 
 ### Steps:
 
@@ -36,14 +36,14 @@ Before using the tool, you need to download the **HaveIBeenPwned** [database](ht
    make
    ```
 
-   This will generate an executable named `hibpexe`.
+   This will generate an executable named `hibp`.
 
 ### Running the Tool
 
 Once built, you can run the program to check your passwords against the offline HaveIBeenPwned database.
 
 ```bash
-./hibpexe <path_to_csv_file> <path_to_pwned_db> <thread_pool_size = defaults to 8>
+./hibp <path_to_csv_file> <path_to_pwned_db> <thread_pool_size = defaults to 8>
 ```
 
 Where:
@@ -54,7 +54,7 @@ Where:
 ### Example Usage:
 
 ```bash
-./hibpexe example_usage/bitwarden_example.csv example_usage/example_database 4
+./hibp example_usage/bitwarden_example.csv example_usage/example_database 4
 ```
 
 This command will check all the passwords in your the example Bitwarden vault against the database in path example_usage/example_database using 4 threads.

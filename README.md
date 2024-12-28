@@ -2,6 +2,8 @@
 
 A tool to check whether your passwords have been exposed in a data breach using an offline version of the HaveIBeenPwned database.
 
+![Build Status](https://github.com/aliharbaji/haveibeenpwned-offline/actions/workflows/ci.yml/badge.svg)
+
 ## Overview
 
 This tool enables you to check whether the passwords in your Bitwarden vault have been compromised by using the offline HaveIBeenPwned database. It operates locally without the need for online services, making it fast and efficient. The tool utilizes multiple threads to speed up the checking process.

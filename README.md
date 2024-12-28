@@ -59,7 +59,7 @@ Where:
 ./hibp example_usage/bitwarden_example.csv example_usage/example_database 4
 ```
 
-This command will check all the passwords in your the example Bitwarden vault against the database in path example_usage/example_database using 4 threads.
+This command will check all the passwords in the example Bitwarden vault against the database in path example_usage/example_database using 4 threads.
 
 ### Output
 

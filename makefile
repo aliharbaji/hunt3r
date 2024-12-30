@@ -9,9 +9,10 @@ HASH_DIR = hash
 QUEUE_DIR = queue
 READ_DIR = read
 UTILITY_DIR = utility
+ACCOUNT_DIR = account
 
 # Source files and object files
-SRCS = $(wildcard $(SRC_DIR)/*.c $(HASH_DIR)/*.c $(QUEUE_DIR)/*.c $(READ_DIR)/*.c $(UTILITY_DIR)/*.c)
+SRCS = $(wildcard $(SRC_DIR)/*.c $(HASH_DIR)/*.c $(ACCOUNT_DIR)/*.c $(QUEUE_DIR)/*.c $(READ_DIR)/*.c $(UTILITY_DIR)/*.c)
 OBJS = $(SRCS:.c=.o)
 
 # Output executable
@@ -29,4 +30,8 @@ $(TARGET): $(OBJS)
 clean:
 	rm -f $(OBJS) $(TARGET)
 
-.PHONY: all clean
+# Run with Valgrind
+valgrind: $(TARGET)
+	valgrind --leak-check=full --track-origins=yes --verbose ./$(TARGET)
+
+.PHONY: all clean valgrind

@@ -13,8 +13,7 @@ CMakeUserPresets.json
 /CMakeLists.txt
 /cmake-build-debug/
 *.o
-/haveibp
-haveibp
 .idea
 /idea
 hibpcmake-build-debug/
+/hibp

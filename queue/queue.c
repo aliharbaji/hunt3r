@@ -4,7 +4,7 @@
 #include <sys/time.h>
 #include <string.h>
 #include "queue.h"
-#include "../utility/account.h"
+#include "../account/account.h"
 
 // Define the Node structure
 struct Node {
@@ -160,49 +160,4 @@ struct timeval getArrivalTimeAtIndex(Queue q, int index) {
     return current->arrival_time;
 }
 
-// Example function to create a new account
-struct Account* createAccount(const char* folder, int favorite, const char* type, const char* name,
-                              const char* notes, const char* fields, const char* reprompt, const char* login_uri, const char* login_username,
-                              const char* login_password, const char* login_totp) {
-    struct Account* acc = (struct Account*)malloc(sizeof(struct Account));
-    if (!acc) {
-        return NULL; // Memory allocation failed
-    }
-    acc->folder = folder;
-    acc->favorite = favorite;
-    acc->type = type;
-    acc->name = name;
-    acc->notes = notes;
-    acc->fields = fields;
-    acc->reprompt = reprompt;
-    acc->login_uri = login_uri;
-    acc->login_username = login_username;
-    acc->login_password = login_password;
-    acc->login_totp = login_totp ? login_totp : "0\n"; // Default to empty string if NULL
 
-    // Compute the hash directly into the fixed-size array field
-    sha1_hash(login_password, acc->hashed);
-    acc->hashed[sizeof(acc->hashed) - 1] = '\0';
-
-    return acc;
-}
-
-void printAccount(const struct Account* acc) {
-    if (!acc) {
-        printf("Invalid account.\n");
-        return;
-    }
-    printf("Folder: %s", acc->folder);
-    printf("\nFavorite: %d", acc->favorite);
-    printf("\nType: %s", acc->type);
-    printf("\nName: %s", acc->name);
-    printf("\nNotes: %s", acc->notes);
-    printf("\nFields: %s", acc->fields);
-    printf("\nReprompt: %s", acc->reprompt);
-    printf("\nLogin URI: %s", acc->login_uri);
-    printf("\nUsername: %s", acc->login_username);
-    printf("\nPassword: %s", acc->login_password);
-    printf("\nTOTP: %s", acc->login_totp);
-    printf("\nHashed Password: %s", acc->hashed);
-    printf("\n==================================\n");
-}

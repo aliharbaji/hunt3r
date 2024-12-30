@@ -141,6 +141,7 @@ void* threadRoutine(void* args) {
                    "(this mechanism is not yet supported)\n",
                    acc->login_password, pwnedAmount);
         }
+        freeAcc(acc);
     }
     return NULL;
 }

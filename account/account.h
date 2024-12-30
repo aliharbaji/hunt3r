@@ -2,7 +2,7 @@
 #define ACCOUNT_H
 
 
-#include "headers.h"
+#include "../utility/headers.h"
 
 // Define the account struct that holds information like password, folder, etc.
 // "folder","name","url","username","password","notes","favorite"
@@ -26,5 +26,7 @@ struct Account* createAccount(const char* folder, int favorite, const char* type
                               const char* login_password, const char* login_totp);
 
 void printAccount(const struct Account* acc);
+
+void freeAcc(struct Account* acc);
 
 #endif // ACCOUNT_H

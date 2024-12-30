@@ -95,17 +95,17 @@ int parseCSV(const char* filename, Queue q) {
 
         // Create a new Account object
         struct Account* account = createAccount(
-                folder ? strdup(folder) : "0\n",            // Folder (ensure folder is not NULL)
+                folder ? folder : "0\n",            // Folder (ensure folder is not NULL)
                 is_favorite,                                // Favorite (already an integer)
-                type ? strdup(type) : "0\n",                // Type (default to "0\n" if NULL)
-                name ? strdup(name) : "0\n",                // Name (default to "0\n" if NULL)
-                notes ? strdup(notes) : "0\n",              // Notes (default to "0\n" if NULL)
-                fields ? strdup(fields) : "0\n",            // Fields (default to "0\n" if NULL)
-                reprompt ? strdup(reprompt) : "0\n",        // Reprompt (default to "0\n" if NULL)
-                login_uri ? strdup(login_uri) : "0\n",      // Login URI (default to "0\n" if NULL)
-                login_username ? strdup(login_username) : "0\n",  // Username (default to "0\n" if NULL)
-                login_password ? strdup(login_password) : "0\n",  // Password (default to "0\n" if NULL)
-                login_totp ? strdup(login_totp) : "0\n"     // TOTP (default to "0\n" if NULL)
+                type ? type : "0\n",                // Type (default to "0\n" if NULL)
+                name ? name : "0\n",                // Name (default to "0\n" if NULL)
+                notes ? notes : "0\n",              // Notes (default to "0\n" if NULL)
+                fields ? fields : "0\n",            // Fields (default to "0\n" if NULL)
+                reprompt ? reprompt : "0\n",        // Reprompt (default to "0\n" if NULL)
+                login_uri ? login_uri : "0\n",      // Login URI (default to "0\n" if NULL)
+                login_username ? login_username : "0\n",  // Username (default to "0\n" if NULL)
+                login_password ? login_password : "0\n",  // Password (default to "0\n" if NULL)
+                login_totp ? login_totp : "0\n"     // TOTP (default to "0\n" if NULL)
         );
 
         if (!account) {

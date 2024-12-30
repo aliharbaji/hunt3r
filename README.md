@@ -29,7 +29,7 @@ Before using the tool, you need to download the [_HaveIBeenPwned_](https://havei
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository/haveibeenpwned-offline.git
+   git clone https://github.com/aliharbaji/haveibeenpwned-offline.git
    cd haveibeenpwned-offline
    ```
 

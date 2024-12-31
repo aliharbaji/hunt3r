@@ -1,4 +1,3 @@
-#include "hash/hash.h"
 #include "utility/globals.h"
 #include "utility/helper.h"
 

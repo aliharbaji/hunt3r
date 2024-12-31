@@ -4,33 +4,35 @@ CFLAGS = -Wall -Wextra -pedantic -g
 LDFLAGS = -lcrypto
 
 # Directories
-SRC_DIR = .
-HASH_DIR = hash
-QUEUE_DIR = queue
-READ_DIR = read
-UTILITY_DIR = utility
-ACCOUNT_DIR = account
+SRC_DIR = src
+BUILD_DIR = build
+HASH_DIR = $(SRC_DIR)/hash
+QUEUE_DIR = $(SRC_DIR)/queue
+READ_DIR = $(SRC_DIR)/read
+UTILITY_DIR = $(SRC_DIR)/utility
+ACCOUNT_DIR = $(SRC_DIR)/account
 
 # Source files and object files
 SRCS = $(wildcard $(SRC_DIR)/*.c $(HASH_DIR)/*.c $(ACCOUNT_DIR)/*.c $(QUEUE_DIR)/*.c $(READ_DIR)/*.c $(UTILITY_DIR)/*.c)
-OBJS = $(SRCS:.c=.o)
+OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
 
-# Output executable
 TARGET = hibp
 
-# Default target
+# Create necessary directories
+$(shell mkdir -p $(BUILD_DIR))
+
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-%.o: %.c
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -rf $(BUILD_DIR) $(TARGET)
 
-# Run with Valgrind
 valgrind: $(TARGET)
 	valgrind --leak-check=full --track-origins=yes --verbose ./$(TARGET)
 

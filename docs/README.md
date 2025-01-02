@@ -56,7 +56,17 @@ Where:
 ### Example Usage:
 
 ```bash
-./hibp example_usage/bitwarden_example.csv example_usage/example_database 4
+./hibp example_usage/bitwarden_example.csv example_usage/example_database 4                                                                                                                             
+```
+
+
+This command will check all the passwords in the example Bitwarden vault against the database in path example_usage/example_database using 4 threads.
+
+### Output
+
+The program will print a list of passwords that have been exposed in a data breach. Each exposed password will be printed with the number of breaches it has been part of.
+
+```bash
    ___                             _           ___  _                  _    
   / _ \__      __ _ __    ___   __| |         / __\| |__    ___   ___ | | __
  / /_)/\ \ /\ / /| '_ \  / _ \ / _` | _____  / /   | '_ \  / _ \ / __|| |/ /
@@ -73,16 +83,8 @@ WE ADVISE YOU CHANGE IT ON THE FOLLOWING ACCOUNTS...(this mechanism is not yet s
  | |_ _ _ __  _ ___| |__   ___  __| |______ ___| |__   ___  ___| | __
  |  _| | '_ \| / __| '_ \ / _ \/ _` |______/ __| '_ \ / _ \/ __| |/ /
  | | | | | | | \__ \ | | |  __/ (_| |     | (__| | | |  __/ (__|   < 
- |_| |_|_| |_|_|___/_| |_|\___|\__,_|      \___|_| |_|\___|\___|_|\_\                                                                                                                                 
+ |_| |_|_| |_|_|___/_| |_|\___|\__,_|      \___|_| |_|\___|\___|_|\_\    
 ```
-
-
-This command will check all the passwords in the example Bitwarden vault against the database in path example_usage/example_database using 4 threads.
-
-### Output
-
-The program will print a list of passwords that have been exposed in a data breach. Each exposed password will be printed with the number of breaches it has been part of.
-
 ## Features
 
 - **Offline Checking**: Check if your passwords have been pwned without needing an internet connection.

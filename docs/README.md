@@ -57,7 +57,25 @@ Where:
 
 ```bash
 ./hibp example_usage/bitwarden_example.csv example_usage/example_database 4
+   ___                             _           ___  _                  _    
+  / _ \__      __ _ __    ___   __| |         / __\| |__    ___   ___ | | __
+ / /_)/\ \ /\ / /| '_ \  / _ \ / _` | _____  / /   | '_ \  / _ \ / __|| |/ /
+/ ___/  \ V  V / | | | ||  __/| (_| ||_____|/ /___ | | | ||  __/| (__ |   < 
+\/       \_/\_/  |_| |_| \___| \__,_|       \____/ |_| |_| \___| \___||_|\_\
+
+Successfully parsed and enqueued 1007 accounts.
+PASSWORD 'password' PWNED -55- TIMES!
+WE ADVISE YOU CHANGE IT ON THE FOLLOWING ACCOUNTS...(this mechanism is not yet supported)
+PASSWORD 'password123' PWNED -99- TIMES!
+WE ADVISE YOU CHANGE IT ON THE FOLLOWING ACCOUNTS...(this mechanism is not yet supported)
+   __ _       _     _              _            _               _    
+  / _(_)     (_)   | |            | |          | |             | |   
+ | |_ _ _ __  _ ___| |__   ___  __| |______ ___| |__   ___  ___| | __
+ |  _| | '_ \| / __| '_ \ / _ \/ _` |______/ __| '_ \ / _ \/ __| |/ /
+ | | | | | | | \__ \ | | |  __/ (_| |     | (__| | | |  __/ (__|   < 
+ |_| |_|_| |_|_|___/_| |_|\___|\__,_|      \___|_| |_|\___|\___|_|\_\                                                                                                                                 
 ```
+
 
 This command will check all the passwords in the example Bitwarden vault against the database in path example_usage/example_database using 4 threads.
 

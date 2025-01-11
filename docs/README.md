@@ -1,6 +1,6 @@
-# HaveIBeenPwned-Offline
+# hunt3r
 
-A tool to check whether your passwords have been exposed in a data breach using an offline version of the HaveIBeenPwned database.
+A command-line tool to check whether your passwords have been exposed in a data breach using an offline version of the HaveIBeenPwned database.
 
 ![Build Status](https://github.com/aliharbaji/haveibeenpwned-offline/actions/workflows/ci.yml/badge.svg)
 
@@ -38,14 +38,14 @@ Before using the tool, you need to download the [_HaveIBeenPwned_](https://havei
    make
    ```
 
-   This will generate an executable named `hibp`.
+   This will generate an executable named `hunt3r`.
 
 ### Running the Tool
 
 Once built, you can run the program to check your passwords against the offline HaveIBeenPwned database.
 
 ```bash
-./hibp <path_to_csv_file> <path_to_pwned_db> <thread_pool_size = defaults to 8>
+./hunt3r <path_to_csv_file> <path_to_pwned_db> <thread_pool_size = defaults to 8>
 ```
 
 Where:
@@ -56,7 +56,7 @@ Where:
 ### Example Usage:
 
 ```bash
-./hibp example_usage/bitwarden_example.csv example_usage/example_database 4                                                                                                                             
+./hunt3r example_usage/bitwarden_example.csv example_usage/example_database 4                                                                                                                             
 ```
 
 

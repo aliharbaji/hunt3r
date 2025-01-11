@@ -2,7 +2,7 @@
 
 A command-line tool to check whether your passwords have been exposed in a data breach using an offline version of the HaveIBeenPwned database.
 
-![Build Status](https://github.com/aliharbaji/haveibeenpwned-offline/actions/workflows/ci.yml/badge.svg)
+![Build Status](https://github.com/aliharbaji/hunt3r/actions/workflows/ci.yml/badge.svg)
 
 ## Overview
 
@@ -29,8 +29,8 @@ Before using the tool, you need to download the [_HaveIBeenPwned_](https://havei
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/aliharbaji/haveibeenpwned-offline.git
-   cd haveibeenpwned-offline
+   git clone https://github.com/aliharbaji/hunt3r.git
+   cd hunt3r
    ```
 
 2. **Install dependencies** and **build the project**:

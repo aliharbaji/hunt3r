@@ -16,7 +16,7 @@ ACCOUNT_DIR = $(SRC_DIR)/account
 SRCS = $(wildcard $(SRC_DIR)/*.c $(HASH_DIR)/*.c $(ACCOUNT_DIR)/*.c $(QUEUE_DIR)/*.c $(READ_DIR)/*.c $(UTILITY_DIR)/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
 
-TARGET = hibp
+TARGET = hunt3r
 
 # Create necessary directories
 $(shell mkdir -p $(BUILD_DIR))

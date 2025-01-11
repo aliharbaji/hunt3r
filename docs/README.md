@@ -67,23 +67,29 @@ This command will check all the passwords in the example Bitwarden vault against
 The program will print a list of passwords that have been exposed in a data breach. Each exposed password will be printed with the number of breaches it has been part of.
 
 ```bash
-   ___                             _           ___  _                  _    
-  / _ \__      __ _ __    ___   __| |         / __\| |__    ___   ___ | | __
- / /_)/\ \ /\ / /| '_ \  / _ \ / _` | _____  / /   | '_ \  / _ \ / __|| |/ /
-/ ___/  \ V  V / | | | ||  __/| (_| ||_____|/ /___ | | | ||  __/| (__ |   < 
-\/       \_/\_/  |_| |_| \___| \__,_|       \____/ |_| |_| \___| \___||_|\_\
-
+.__                      __   ________
+|  |__   __ __   ____  _/  |_ \_____  \ _______
+|  |  \ |  |  \ /    \ \   __\  _(__  < \_  __ \
+|   Y  \|  |  /|   |  \ |  |   /       \ |  | \/
+|___|  /|____/ |___|  / |__|  /______  / |__|
+     \/             \/               \/
 Successfully parsed and enqueued 1007 accounts.
 PASSWORD 'password' PWNED -55- TIMES!
 WE ADVISE YOU CHANGE IT ON THE FOLLOWING ACCOUNTS...(this mechanism is not yet supported)
 PASSWORD 'password123' PWNED -99- TIMES!
 WE ADVISE YOU CHANGE IT ON THE FOLLOWING ACCOUNTS...(this mechanism is not yet supported)
-   __ _       _     _              _            _               _    
-  / _(_)     (_)   | |            | |          | |             | |   
- | |_ _ _ __  _ ___| |__   ___  __| |______ ___| |__   ___  ___| | __
- |  _| | '_ \| / __| '_ \ / _ \/ _` |______/ __| '_ \ / _ \/ __| |/ /
- | | | | | | | \__ \ | | |  __/ (_| |     | (__| | | |  __/ (__|   < 
- |_| |_|_| |_|_|___/_| |_|\___|\__,_|      \___|_| |_|\___|\___|_|\_\    
+.__                      __   ________
+|  |__   __ __   ____  _/  |_ \_____  \ _______
+|  |  \ |  |  \ /    \ \   __\  _(__  < \_  __ \
+|   Y  \|  |  /|   |  \ |  |   /       \ |  | \/
+|___|  /|____/ |___|  / |__|  /______  / |__|
+     \/             \/               \/
+           _____ .__         .__         .__                 .___
+         _/ ____\|__|  ____  |__|  ______|  |__    ____    __| _/
+         \   __\ |  | /    \ |  | /  ___/|  |  \ _/ __ \  / __ |
+          |  |   |  ||   |  \|  | \___ \ |   Y  \\  ___/ / /_/ |
+          |__|   |__||___|  /|__|/____  >|___|  / \___  >\____ |
+                          \/          \/      \/      \/      \/ 
 ```
 ## Features
 

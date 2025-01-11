@@ -21,4 +21,4 @@ jobs:
       run: |
         make
     - name: Run tests
-      run: ./hibp example_usage/bitwarden_example.csv example_usage/example_database 4
+      run: ./hunt3r example_usage/bitwarden_example.csv example_usage/example_database 4
